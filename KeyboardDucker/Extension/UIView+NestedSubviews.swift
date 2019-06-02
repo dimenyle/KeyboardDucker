@@ -1,6 +1,6 @@
 //
 //  UIView+NestedSubviews.swift
-//  KeyboardAvoidable
+//  KeyboardDucking
 //
 //  Created by Levente Dimény on 2019. 06. 01..
 //  Copyright © 2019. Levente Dimény. All rights reserved.

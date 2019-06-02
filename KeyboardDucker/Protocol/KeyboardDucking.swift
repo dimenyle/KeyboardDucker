@@ -1,6 +1,6 @@
 //
-//  KeyboardAvoidable.swift
-//  KeyboardAvoidable
+//  KeyboardDucking.swift
+//  KeyboardDucking
 //
 //  Created by Levente Dimény on 2019. 05. 31..
 //  Copyright © 2019. Levente Dimény. All rights reserved.

@@ -62,17 +62,17 @@ extension KeyboardDucking {
             let keyboardAnimationCurve = (userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue,
             let activeTextField = activeTextField else { return }
 
-        let keyboardHeight = keyboardFrame.height - view.safeAreaInsets.bottom
+        let activeTextFieldFrame = activeTextField.convert(activeTextField.bounds, to: view)
         let animationOptions = UIView.AnimationOptions(rawValue: keyboardAnimationCurve << 16)
 
         if view.frame.origin.y == 0 {
-            guard keyboardFrame.minY < activeTextField.frame.maxY else { return }
+            guard keyboardFrame.minY < activeTextFieldFrame.maxY else { return }
             UIView.animate(withDuration: keyboardAnimationDuration, delay: 0, options: animationOptions, animations: { [weak self] in
-                self?.view.frame.origin.y -= keyboardHeight
+                self?.view.frame.origin.y -= keyboardFrame.height
                 self?.view.layoutIfNeeded()
             })
         } else {
-            guard keyboardFrame.minY > (activeTextField.frame.maxX + keyboardHeight) else { return }
+            guard keyboardFrame.minY > (activeTextFieldFrame.maxX + keyboardFrame.height) else { return }
             UIView.animate(withDuration: keyboardAnimationDuration, delay: 0, options: animationOptions, animations: { [weak self] in
                 self?.view.frame.origin.y = 0
                 self?.view.layoutIfNeeded()

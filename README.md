@@ -20,11 +20,13 @@ import KeyboardDucker
 class ViewController: UIViewController, KeyboardDucking {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         startDuckingKeyboard()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         stopDuckingKeyboard()
     }
 }

@@ -35,6 +35,8 @@ class ViewController: UIViewController, KeyboardDucking {
 
 ![](KeyboardDuckerDemo.gif)
 
+N.B.: Everything works as expected even when the text field is inside a subview of the view controller’s main view.
+
 ## Meta
 
 Levente Dimény – [@leventedimeny](https://twitter.com/leventedimeny)

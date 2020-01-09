@@ -31,9 +31,9 @@ class ViewController: UIViewController, KeyboardDucking {
     }
 }
 ```
-## In action
+## Demo
 
-![](ducker-demo.gif)
+![](KeyboardDuckerDemo.gif)
 
 ## Meta
 
